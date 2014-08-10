@@ -1,5 +1,6 @@
 # Reading the data from the contents of the zipped file
-df.power = read.csv("household_power_consumption.txt", header=T, sep=";", stringsAsFactors=F, na.strings="?", colClasses=c("character", "character", "numeric", "numeric", "numeric", "numeric","numeric", "numeric", "numeric"))
+df.power = read.csv("household_power_consumption.txt", header=T, sep=";", 
+                    stringsAsFactors=F, na.strings="?", colClasses=c("character", "character", "numeric", "numeric", "numeric", "numeric","numeric", "numeric", "numeric"))
 
 ## Formatting the date and subseting the data only on 2007-02-01 and 2007-02-02
 df.power$Date = as.Date(df.power$Date, format="%d/%m/%Y")
